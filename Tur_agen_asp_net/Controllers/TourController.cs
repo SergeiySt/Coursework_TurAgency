@@ -29,7 +29,7 @@ namespace Tur_agen_asp_net.Controllers
             ViewBag.Tours = tours;
             ViewBag.SuccessMessage = successMessage;
 
-            return View();
+            return View(tours);
         }
 
         [HttpGet]
@@ -89,7 +89,7 @@ namespace Tur_agen_asp_net.Controllers
                 _context.Tour.Update(existingTour);
                 _context.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("TourList", new { successMessage = "Тур успешно обновлено." });
             }
             return View(tour);
         }
@@ -106,7 +106,7 @@ namespace Tur_agen_asp_net.Controllers
                 _context.SaveChanges();
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("TourList", new { successMessage = "Тур успешно удалено." });
         }
     }
 }
