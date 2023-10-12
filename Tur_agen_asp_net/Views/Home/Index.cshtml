@@ -1,13 +1,60 @@
-﻿@{
+﻿
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Hello World!</h1>
-    @foreach (var country in Model)
+    @* @foreach (var country in Model)
     {
         <p>@country.Country_name</p>
-    }
+    } *@
+
+    <h1>User List</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Town</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Count</th>
+                <th>Url</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tour in Model)
+            {
+                <tr>
+                    <td>@tour.id_tour</td>
+                    <td>@tour.TName_tour</td>
+                    <td>@tour.TCountry</td>
+                    <td>@tour.TTown</td>
+                    <td>@tour.TDescription</td>
+                    <td>@tour.TPrice</td>
+                    <td>@tour.TCount</td>
+                    <td>@tour.TUrl</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+    </div>
+   
+    <div class="menu">
+        @if (ViewBag.ShowTourManagement != null && ViewBag.ShowTourManagement)
+        {
+            <ul>
+                <li><a asp-controller="Tour" asp-action="Create">Добавить новый тур</a></li>
+                <li><a asp-controller="Tour" asp-action="Edit">Изменить тур</a></li>
+                <li><a asp-controller="Tour" asp-action="Delete">Удалить тур</a></li>
+            </ul>
+        }
+    </div>
 </div>
 
 

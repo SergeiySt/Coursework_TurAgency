@@ -12,7 +12,7 @@ namespace Tur_agen_asp_net.Models
         public decimal TOSumm { get; set; }
 
 
-        public Tour Tour { get; set; }
-        public Users User { get; set; }
+        //public Tour Tour { get; set; }
+        //public Users User { get; set; }
     }
 }
