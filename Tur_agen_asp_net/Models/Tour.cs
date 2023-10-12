@@ -22,6 +22,6 @@ namespace Tur_agen_asp_net.Models
         [Required]
         public string TUrl { get; set;}
 
-        public ICollection<TourOrder> TourOrders { get; set; }
+        //public ICollection<TourOrder> TourOrders { get; set; }
     }
 }

@@ -12,20 +12,43 @@ namespace Tur_agen_asp_net.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public IActionResult Index()
+
+        //public IActionResult Index()
+        //{
+        //    ViewBag.ShowTourManagement = true;
+        //    var tours = _context.Tour.ToList();
+        //    return View(tours);
+        //}
+
+        public IActionResult TourList(string successMessage)
         {
+            // Здесь вы можете получить список всех туров из базы данных
+            var tours = _context.Tour.ToList();
+
+            // Передайте список туров и сообщение об успешном добавлении в представление
+            ViewBag.Tours = tours;
+            ViewBag.SuccessMessage = successMessage;
+
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            // Создайте представление для создания нового тура
             return View();
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Tour tour)
         {
             if (ModelState.IsValid)
             {
-                _context.Tours.Add(tour);
+                _context.Tour.Add(tour);
                 _context.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction("TourList", new { successMessage = "Тур успешно добавлен." });
             }
             return View(tour);
         }
@@ -34,7 +57,7 @@ namespace Tur_agen_asp_net.Controllers
         public IActionResult Edit(int id)
         {
             // Получите тур с заданным идентификатором из базы данных
-            var tour = _context.Tours.FirstOrDefault(t => t.id_tour == id);
+            var tour = _context.Tour.FirstOrDefault(t => t.id_tour == id);
             if (tour == null)
             {
                 return NotFound();
@@ -49,7 +72,7 @@ namespace Tur_agen_asp_net.Controllers
             if (ModelState.IsValid)
             {
                 // Обновите данные тура в базе данных
-                var existingTour = _context.Tours.FirstOrDefault(t => t.id_tour == id);
+                var existingTour = _context.Tour.FirstOrDefault(t => t.id_tour == id);
                 if (existingTour == null)
                 {
                     return NotFound();
@@ -63,7 +86,7 @@ namespace Tur_agen_asp_net.Controllers
                 existingTour.TCount = tour.TCount;
                 existingTour.TUrl = tour.TUrl;
 
-                _context.Tours.Update(existingTour);
+                _context.Tour.Update(existingTour);
                 _context.SaveChanges();
 
                 return RedirectToAction("Index");
@@ -76,10 +99,10 @@ namespace Tur_agen_asp_net.Controllers
         public IActionResult Delete(int id)
         {
             // Найдите тур с заданным идентификатором и удалите его из базы данных
-            var tour = _context.Tours.FirstOrDefault(t => t.id_tour == id);
+            var tour = _context.Tour.FirstOrDefault(t => t.id_tour == id);
             if (tour != null)
             {
-                _context.Tours.Remove(tour);
+                _context.Tour.Remove(tour);
                 _context.SaveChanges();
             }
 

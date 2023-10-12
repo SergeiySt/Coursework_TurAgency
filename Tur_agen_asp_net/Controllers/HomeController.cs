@@ -2,11 +2,11 @@
 using System.Diagnostics;
 using Tur_agen_asp_net.Models;
 using System.Collections;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Tur_agen_asp_net.Controllers
 {
-
-  
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -17,22 +17,19 @@ namespace Tur_agen_asp_net.Controllers
             _logger = logger;
         }
 
+        ApDbContext db = new ApDbContext();
         public IActionResult Index()
         {
-            List<Country> list_countris = new List<Country>()
-                {
-                 new Country()
-                {
-                      Id = 1,
-                 Country_name = "Турция",
-                  Picture =""
-                 }
-                    };
+            ViewBag.ShowTourManagement = true;
 
-            return View(list_countris);
+             return View(db.Tour.ToList());
+           // return View();
         }
 
-        public IActionResult Privacy()
+         
+
+
+public IActionResult Privacy()
         {
             return View();
         }
