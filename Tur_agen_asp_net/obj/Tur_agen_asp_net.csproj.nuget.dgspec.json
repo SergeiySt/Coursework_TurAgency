@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ДЗ_Шаг\\ASP.net\\Lesson_7\\Tur_agen_asp_net\\Tur_agen_asp_net.csproj": {}
+    "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\Tur_agen_asp_net.csproj": {}
   },
   "projects": {
-    "D:\\ДЗ_Шаг\\ASP.net\\Lesson_7\\Tur_agen_asp_net\\Tur_agen_asp_net.csproj": {
+    "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\Tur_agen_asp_net.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ДЗ_Шаг\\ASP.net\\Lesson_7\\Tur_agen_asp_net\\Tur_agen_asp_net.csproj",
+        "projectUniqueName": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\Tur_agen_asp_net.csproj",
         "projectName": "Tur_agen_asp_net",
-        "projectPath": "D:\\ДЗ_Шаг\\ASP.net\\Lesson_7\\Tur_agen_asp_net\\Tur_agen_asp_net.csproj",
+        "projectPath": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\Tur_agen_asp_net.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\ДЗ_Шаг\\ASP.net\\Lesson_7\\Tur_agen_asp_net\\obj\\",
+        "outputPath": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,6 +57,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.12, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.9, )"
             }
           },
           "imports": [

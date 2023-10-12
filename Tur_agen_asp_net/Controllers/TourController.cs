@@ -5,6 +5,13 @@ namespace Tur_agen_asp_net.Controllers
 {
     public class TourController : Controller
     {
+        private readonly ApDbContext _context;
+
+        public TourController(ApDbContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -16,13 +23,8 @@ namespace Tur_agen_asp_net.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Добавьте новый тур в базу данных
-                using (var context = new ApDbContext(/* передайте соответствующие опции */))
-                {
-                    context.Tours.Add(tour);
-                    context.SaveChanges();
-                }
-
+                _context.Tours.Add(tour);
+                _context.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(tour);
@@ -32,16 +34,13 @@ namespace Tur_agen_asp_net.Controllers
         public IActionResult Edit(int id)
         {
             // Получите тур с заданным идентификатором из базы данных
-            using (var context = new ApDbContext(/* передайте соответствующие опции */))
+            var tour = _context.Tours.FirstOrDefault(t => t.id_tour == id);
+            if (tour == null)
             {
-                var tour = context.Tours.FirstOrDefault(t => t.id_tour == id);
-                if (tour == null)
-                {
-                    return NotFound();
-                }
-
-                return View(tour);
+                return NotFound();
             }
+
+            return View(tour);
         }
 
         [HttpPost]
@@ -50,29 +49,38 @@ namespace Tur_agen_asp_net.Controllers
             if (ModelState.IsValid)
             {
                 // Обновите данные тура в базе данных
-                using (var context = new ApDbContext(/* передайте соответствующие опции */))
+                var existingTour = _context.Tours.FirstOrDefault(t => t.id_tour == id);
+                if (existingTour == null)
                 {
-                    context.Tours.Update(tour);
-                    context.SaveChanges();
+                    return NotFound();
                 }
+
+                existingTour.TName_tour = tour.TName_tour;
+                existingTour.TCountry = tour.TCountry;
+                existingTour.TTown = tour.TTown;
+                existingTour.TDescription = tour.TDescription;
+                existingTour.TPrice = tour.TPrice;
+                existingTour.TCount = tour.TCount;
+                existingTour.TUrl = tour.TUrl;
+
+                _context.Tours.Update(existingTour);
+                _context.SaveChanges();
 
                 return RedirectToAction("Index");
             }
             return View(tour);
         }
 
+
         [HttpPost]
         public IActionResult Delete(int id)
         {
             // Найдите тур с заданным идентификатором и удалите его из базы данных
-            using (var context = new ApDbContext(/* передайте соответствующие опции */))
+            var tour = _context.Tours.FirstOrDefault(t => t.id_tour == id);
+            if (tour != null)
             {
-                var tour = context.Tours.FirstOrDefault(t => t.id_tour == id);
-                if (tour != null)
-                {
-                    context.Tours.Remove(tour);
-                    context.SaveChanges();
-                }
+                _context.Tours.Remove(tour);
+                _context.SaveChanges();
             }
 
             return RedirectToAction("Index");
