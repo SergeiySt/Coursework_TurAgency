@@ -1,60 +1,38 @@
 ﻿
-
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Hello World!</h1>
-    @* @foreach (var country in Model)
-    {
-        <p>@country.Country_name</p>
-    } *@
 
-    <h1>User List</h1>
+    <ul class="d-flex text-center flex-wrap">
+        @foreach (var tour in Model)
+        {
+            <li class="col-xxl-4 col-lg-6 col-md-12 p-2" style="list-style-type: none;">
+                <div class="card">
+                    <img src="@tour.TUrl" alt="@tour.TName_tour" class="card-img-top" />
+                    <div class="card-body">
+                        <h3 class="card-title">@tour.TName_tour</h3>
+                        <p class="card-text">@tour.TCountry</p>
+                        <p style="text-align: left;"> @tour.TDescription</p>
+                        <p style="height: 10px" class="card-price">Ціна: @(tour.TPrice.ToString("0.00") + " грн.")</p>
+                        <p class="block-description">Кількість місць: @tour.TCount</p>
+                        <a href="tour-details.aspx" class="btn btn-primary">Замовити</a>
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Country</th>
-                <th>Town</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Count</th>
-                <th>Url</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var tour in Model)
-            {
-                <tr>
-                    <td>@tour.id_tour</td>
-                    <td>@tour.TName_tour</td>
-                    <td>@tour.TCountry</td>
-                    <td>@tour.TTown</td>
-                    <td>@tour.TDescription</td>
-                    <td>@tour.TPrice</td>
-                    <td>@tour.TCount</td>
-                    <td>@tour.TUrl</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <div>
-    </div>
-   
     <div class="menu">
         @if (ViewBag.ShowTourManagement != null && ViewBag.ShowTourManagement)
         {
             <ul>
-                <li><a asp-controller="Tour" asp-action="Create">Добавить новый тур</a></li>
-                <li><a asp-controller="Tour" asp-action="Edit">Изменить тур</a></li>
-                <li><a asp-controller="Tour" asp-action="Delete">Удалить тур</a></li>
+                <li>@Html.ActionLink("Добавить новый тур", "Create", "Tour")</li>
+                <li>@Html.ActionLink("Изменить тур", "Edit", "Tour")</li>
+                <li>@Html.ActionLink("Удалить тур", "Delete", "Tour")</li>
             </ul>
         }
     </div>
 </div>
-
 
