@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DbM+jSa2HSm/iWaXSf1U21T2r+MOXQIeMiFO7xg1As8=",
+  "Hash": "KBjG8lSDD+xTwSoTETlvK4tFKfYa2wYdPYT45xNA2fQ=",
   "Source": "Tur_agen_asp_net",
   "BasePath": "_content/Tur_agen_asp_net",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\images\\12.jpg",
+      "SourceId": "Tur_agen_asp_net",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\",
+      "BasePath": "_content/Tur_agen_asp_net",
+      "RelativePath": "images/12.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\12.jpg"
+    },
+    {
+      "Identity": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\images\\14.png",
+      "SourceId": "Tur_agen_asp_net",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\",
+      "BasePath": "_content/Tur_agen_asp_net",
+      "RelativePath": "images/14.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\14.png"
     },
     {
       "Identity": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\js\\site.js",
