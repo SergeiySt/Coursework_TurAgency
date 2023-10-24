@@ -27,13 +27,13 @@ namespace Tur_agen_asp_net.Models
             //    .WithMany()
             //    .HasForeignKey(to => to.id_users);
 
-            modelBuilder.Entity<TourOrder>()
-                .Property(to => to.TOSumm)
-                .HasColumnType("decimal(18, 4)");
+            //modelBuilder.Entity<TourOrder>()
+            //    .Property(to => to.TOSumm)
+            //    .HasColumnType("decimal(18, 4)");
 
-            modelBuilder.Entity<Tour>()
-                .Property(to => to.TPrice)
-                .HasColumnType("decimal(18, 4)");
+            //modelBuilder.Entity<Tour>()
+            //    .Property(to => to.TPrice)
+            //    .HasColumnType("decimal(18, 4)");
 
             base.OnModelCreating(modelBuilder);
         }

@@ -22,10 +22,10 @@ namespace Tur_agen_asp_net.Controllers
 
         public IActionResult TourList(string successMessage)
         {
-            // Здесь вы можете получить список всех туров из базы данных
+           
             var tours = _context.Tour.ToList();
 
-            // Передайте список туров и сообщение об успешном добавлении в представление
+           
             ViewBag.Tours = tours;
             ViewBag.SuccessMessage = successMessage;
 
@@ -35,7 +35,7 @@ namespace Tur_agen_asp_net.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            // Создайте представление для создания нового тура
+            
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace Tur_agen_asp_net.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            // Получите тур с заданным идентификатором из базы данных
+            
             var tour = _context.Tour.FirstOrDefault(t => t.id_tour == id);
             if (tour == null)
             {
@@ -71,7 +71,7 @@ namespace Tur_agen_asp_net.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Обновите данные тура в базе данных
+               
                 var existingTour = _context.Tour.FirstOrDefault(t => t.id_tour == id);
                 if (existingTour == null)
                 {
@@ -98,7 +98,7 @@ namespace Tur_agen_asp_net.Controllers
         [HttpPost]
         public IActionResult Delete(int id)
         {
-            // Найдите тур с заданным идентификатором и удалите его из базы данных
+        
             var tour = _context.Tour.FirstOrDefault(t => t.id_tour == id);
             if (tour != null)
             {

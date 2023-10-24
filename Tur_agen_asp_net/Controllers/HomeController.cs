@@ -20,16 +20,12 @@ namespace Tur_agen_asp_net.Controllers
         ApDbContext db = new ApDbContext();
         public IActionResult Index()
         {
-            ViewBag.ShowTourManagement = true;
-
+             ViewBag.ShowTourManagement = true;
              return View(db.Tour.ToList());
            // return View();
         }
 
-         
-
-
-public IActionResult Privacy()
+    public IActionResult Privacy()
         {
             return View();
         }
