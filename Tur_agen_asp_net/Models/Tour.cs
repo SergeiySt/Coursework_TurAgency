@@ -21,7 +21,5 @@ namespace Tur_agen_asp_net.Models
         public int TCount { get; set;}
         [Required]
         public string TUrl { get; set;}
-
-        //public ICollection<TourOrder> TourOrders { get; set; }
     }
 }

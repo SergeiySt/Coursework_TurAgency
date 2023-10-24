@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KBjG8lSDD+xTwSoTETlvK4tFKfYa2wYdPYT45xNA2fQ=",
+  "Hash": "/ZmIjhSyXGJxGdbrbLaLdhMro06a3Zo+uPIsffRX/fg=",
   "Source": "Tur_agen_asp_net",
   "BasePath": "_content/Tur_agen_asp_net",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\14.png"
+    },
+    {
+      "Identity": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\images\\15.png",
+      "SourceId": "Tur_agen_asp_net",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\",
+      "BasePath": "_content/Tur_agen_asp_net",
+      "RelativePath": "images/15.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\15.png"
     },
     {
       "Identity": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\js\\site.js",

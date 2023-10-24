@@ -18,5 +18,7 @@ namespace Tur_agen_asp_net.Models
         public string UEmail { get; set; }
         [Required]
         public int UPhone { get; set; }
+
+        public bool UIsAdmin { get; set; }
     }
 }
