@@ -25,6 +25,30 @@
       "PackagePath": "staticwebassets\\images\\15.png"
     },
     {
+      "Id": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\images\\image_3.jpg",
+      "PackagePath": "staticwebassets\\images\\image_3.jpg"
+    },
+    {
+      "Id": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\images\\logo_1.png",
+      "PackagePath": "staticwebassets\\images\\logo_1.png"
+    },
+    {
+      "Id": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\images\\logo_2.png",
+      "PackagePath": "staticwebassets\\images\\logo_2.png"
+    },
+    {
+      "Id": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\images\\logo_3.png",
+      "PackagePath": "staticwebassets\\images\\logo_3.png"
+    },
+    {
+      "Id": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\images\\logo_4.png",
+      "PackagePath": "staticwebassets\\images\\logo_4.png"
+    },
+    {
+      "Id": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\images\\map_1.png",
+      "PackagePath": "staticwebassets\\images\\map_1.png"
+    },
+    {
       "Id": "D:\\ДЗ_Шаг\\ASP.net\\GitHub\\Tur_agen\\Tur_agen_asp_net\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
