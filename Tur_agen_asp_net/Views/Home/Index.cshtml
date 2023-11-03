@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+    <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+    @foreach (var tour in Model)
+    {
+        <div class="d-flex justify-content-center text-center flex-wrap">
+            <div class="card" style="width: 18rem;">
+                <img src="@tour.TUrl" class="card-img-top" alt="@tour.TName_tour">
+                <div class="card-body">
+                    <h4 class="card-title custom-h5">@tour.TName_tour</h4>
+                    <p class="card-text">@tour.TCountry</p>
+                    <p class="card-text">@tour.TDescription</p>
+                    <p style="height: 10px" class="card-price">Ціна: @(tour.TPrice.ToString("0.00") + " грн.")</p>
+                    <p class="card-text">Кількість місць: @tour.TCount</p>
+                    <a href="tour-details.aspx" class="btn custom-btn-blu">Замовити</a>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+
+
+<div class="menu">
+@if (ViewBag.ShowTourManagement != null && ViewBag.ShowTourManagement)
+{
+        <ul>
+            <li>@Html.ActionLink("Добавить новый тур", "Create", "Tour")</li>
+            <li>@Html.ActionLink("Изменить тур", "Edit", "Tour")</li>
+            <li>@Html.ActionLink("Удалить тур", "Delete", "Tour")</li>
+        </ul>
+}
+</div>
+
