@@ -3,7 +3,8 @@
     ViewData["Title"] = "Home Page";
 }
     <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
-    @foreach (var tour in Model)
+    
+    @foreach (var tour in await Model)
     {
         <div class="d-flex justify-content-center text-center flex-wrap">
             <div class="card" style="width: 18rem;">
@@ -31,5 +32,12 @@
             <li>@Html.ActionLink("Удалить тур", "Delete", "Tour")</li>
         </ul>
 }
+    <a asp-action="AdminPanel" asp-controller="Admin" class="btn btn-primary">Вход в AdminPanel</a>
+  @*   <a asp-page="AdminPanel">Вход в AdminPanel</a> *@
+    @* <a asp-action="AdminPanel" asp-controller="Admin">Вход в AdminPanel</a> *@
+   @*  @if (User.IsInRole("Admin")) // Проверка на принадлежность пользователя к роли "Admin"
+    {
+        <a asp-action="AdminPanel" asp-controller="Admin">Вход в AdminPanel</a>
+    } *@
 </div>
 

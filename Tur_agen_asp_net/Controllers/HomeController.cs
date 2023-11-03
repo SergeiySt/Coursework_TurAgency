@@ -9,20 +9,25 @@ namespace Tur_agen_asp_net.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        //private readonly ILogger<HomeController> _logger;
 
-      
-        public HomeController(ILogger<HomeController> logger)
+
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
+
+        private readonly ApDbContext _context;
+
+        public HomeController(ApDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
-
-        ApDbContext db = new ApDbContext();
         public IActionResult Index()
         {
              ViewBag.ShowTourManagement = true;
-             return View(db.Tour.ToList());
-           // return View();
+            // return View(db.Tour.ToList());
+            return View(_context.Tour.ToListAsync());
         }
 
     public IActionResult Privacy()

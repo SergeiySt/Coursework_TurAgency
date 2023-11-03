@@ -1,0 +1,70 @@
+﻿@model Tur_agen_asp_net.Models.Tour
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditTour</title>
+</head>
+<body>
+
+<h4>Tour</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditTour">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id_tour" />
+            <div class="form-group">
+                <label asp-for="TName_tour" class="control-label"></label>
+                <input asp-for="TName_tour" class="form-control" />
+                <span asp-validation-for="TName_tour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TCountry" class="control-label"></label>
+                <input asp-for="TCountry" class="form-control" />
+                <span asp-validation-for="TCountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TTown" class="control-label"></label>
+                <input asp-for="TTown" class="form-control" />
+                <span asp-validation-for="TTown" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TDescription" class="control-label"></label>
+                <input asp-for="TDescription" class="form-control" />
+                <span asp-validation-for="TDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TPrice" class="control-label"></label>
+                <input asp-for="TPrice" class="form-control" />
+                <span asp-validation-for="TPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TCount" class="control-label"></label>
+                <input asp-for="TCount" class="form-control" />
+                <span asp-validation-for="TCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TUrl" class="control-label"></label>
+                <input asp-for="TUrl" class="form-control" />
+                <span asp-validation-for="TUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

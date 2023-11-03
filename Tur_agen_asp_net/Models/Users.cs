@@ -7,15 +7,15 @@ namespace Tur_agen_asp_net.Models
 		[Key]
 		public int id_users { get; set; }
         [Required]
-        public string UName { get; set; }
+        public string? UName { get; set; }
         [Required]
-        public string USurname { get; set; }
+        public string? USurname { get; set; }
         [Required]
-        public string ULogin { get; set; }
+        public string? ULogin { get; set; }
         [Required]
-        public string UPassword { get; set; }
+        public string? UPassword { get; set; }
         [Required]
-        public string UEmail { get; set; }
+        public string? UEmail { get; set; }
         [Required]
         public int UPhone { get; set; }
 
