@@ -8,18 +8,18 @@ namespace Tur_agen_asp_net.Models
         [Key]
         public int id_tour { get; set; }
         [Required]
-        public string TName_tour { get; set; }
+        public string? TName_tour { get; set; }
         [Required]
-        public string TCountry { get; set;}
+        public string? TCountry { get; set;}
         [Required]
-        public string TTown { get; set;}
+        public string? TTown { get; set;}
         [Required]
-        public string TDescription { get; set; }
+        public string? TDescription { get; set; }
         [Required]
         public decimal TPrice { get; set;}
         [Required]
         public int TCount { get; set;}
         [Required]
-        public string TUrl { get; set;}
+        public string? TUrl { get; set;}
     }
 }

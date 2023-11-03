@@ -16,6 +16,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\ДЗ_Шаг\ASP.net\GitHub\Tur_agen\Tur_agen_asp_net
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/ДЗ_Шаг/ASP.net/GitHub/Tur_agen/Tur_agen_asp_net/Views/Admin/AddTour.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkVG91ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ДЗ_Шаг/ASP.net/GitHub/Tur_agen/Tur_agen_asp_net/Views/Admin/AdminPanel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5QYW5lbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ДЗ_Шаг/ASP.net/GitHub/Tur_agen/Tur_agen_asp_net/Views/Admin/DeleteTour.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlVG91ci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ДЗ_Шаг/ASP.net/GitHub/Tur_agen/Tur_agen_asp_net/Views/Admin/EditTour.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFRvdXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ДЗ_Шаг/ASP.net/GitHub/Tur_agen/Tur_agen_asp_net/Views/Admin/TourList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVG91ckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ДЗ_Шаг/ASP.net/GitHub/Tur_agen/Tur_agen_asp_net/Views/Admin/UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ДЗ_Шаг/ASP.net/GitHub/Tur_agen/Tur_agen_asp_net/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

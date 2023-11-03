@@ -10,11 +10,11 @@ namespace Tur_agen_asp_net.Models
 
         [ForeignKey("Tour")]
         public int TourId { get; set; }
-        public Tour Tour { get; set; }
+        public Tour? Tour { get; set; }
 
         [ForeignKey("User")]
         public int UserId { get; set; }
-        public Users User { get; set; }
+        public Users? User { get; set; }
 
         [Required]
         public int TOQuantity { get; set; }

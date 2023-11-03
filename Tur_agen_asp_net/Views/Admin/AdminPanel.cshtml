@@ -1,0 +1,80 @@
+﻿@page
+@model Tur_agen_asp_net.Views.Admin.AdminPanelModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminPanel</title>
+</head>
+<body>
+<p>
+        <a asp-action="AdminPanel">Вход в AdminPanel</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tour[0].TName_tour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tour[0].TCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tour[0].TTown)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tour[0].TDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tour[0].TPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tour[0].TCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tour[0].TUrl)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in  Model.Tour) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TName_tour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TTown)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TUrl)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.id_tour">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.id_tour">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.id_tour">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

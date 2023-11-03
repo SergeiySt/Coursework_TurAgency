@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System;
 using Tur_agen_asp_net.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,10 +9,9 @@ builder.Services.AddControllersWithViews();
 
 builder.Configuration.AddJsonFile("appsettings.json");
 
+
 builder.Services.AddDbContext<ApDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 var app = builder.Build();
@@ -32,8 +32,16 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: "admin",
+    pattern: "admin/{controller=Admin}/{action=TourList}/{id?}");
+
+app.MapControllerRoute(
     name: "default",
-     pattern: "{controller=Home}/{action=Index}/{id?}");
-    // pattern: "{controller=Tour}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+//app.MapControllerRoute(
+//    name: "default",
+//     pattern: "{controller=Home}/{action=Index}/{id?}");
+// pattern: "{controller=Tour}/{action=Index}/{id?}");
 
 app.Run();
