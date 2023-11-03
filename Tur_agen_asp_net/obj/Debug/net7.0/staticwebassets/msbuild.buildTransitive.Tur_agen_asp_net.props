@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Tur_agen_asp_net.props" />
-</Project>
